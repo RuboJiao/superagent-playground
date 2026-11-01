@@ -11,7 +11,11 @@ import unicodedata
 
 
 def greet(name: str) -> str:
-    """Return a greeting for `name`, normalised to Unicode NFC."""
+    """Return a greeting for `name`, normalised to Unicode NFC.
+
+    >>> greet("José")
+    'Hello, José!'
+    """
     return f"Hello, {unicodedata.normalize('NFC', name)}!"
 
 
